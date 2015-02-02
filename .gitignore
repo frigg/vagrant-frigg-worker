@@ -1,0 +1,3 @@
+.vagrant
+
+salt-config/roots/salt/files/worker.yaml

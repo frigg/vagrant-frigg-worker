@@ -1,0 +1,3 @@
+frigg-coverage
+frigg-common
+frigg-worker
