@@ -9,6 +9,12 @@ vagrant up
 Image: Ubuntu 14.04
 
 ### Languages and language tools
+#### Node and io.js
+* nvm
+* io.js 1.2 - default in nvm
+* node.js 0.12
+* node.js 0.11
+
 #### Python
 * Python 2.7.6
 * Python 3.4.2
