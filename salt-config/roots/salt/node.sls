@@ -23,7 +23,7 @@ frigg-node:
       - . .nvm/nvm.sh ; nvm install 0.11
       - . .nvm/nvm.sh ; nvm install 0.10
       - . .nvm/nvm.sh ; nvm install iojs
-      - . .nvm/nvm.sh ; nvm alias default iojs
+      - . .nvm/nvm.sh ; nvm alias default 0.12 
     - user: frigg
     - group: frigg
     - require:

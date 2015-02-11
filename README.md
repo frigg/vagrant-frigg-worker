@@ -11,9 +11,10 @@ Image: Ubuntu 14.04
 ### Languages and language tools
 #### Node and io.js
 * nvm
-* io.js 1.2 - default in nvm
-* node.js 0.12
+* io.js 1.2
+* node.js 0.12 - default in nvm
 * node.js 0.11
+* node.js 0.10
 
 #### Python
 * Python 2.7.6
