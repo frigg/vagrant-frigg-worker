@@ -9,6 +9,10 @@ vagrant up
 Image: Ubuntu 14.04
 
 ### Languages and language tools
+#### Java
+* Java 8
+* Maven
+
 #### Node and io.js
 * nvm
 * io.js 1.2
