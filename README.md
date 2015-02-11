@@ -17,6 +17,7 @@ Image: Ubuntu 14.04
 * tox - installed with pip2
 * flake8 - installed with pip2
 * isort - installed with pip2
+* coverage - installed with pip2
 
 ### Database systems and cache servers
 * memcached

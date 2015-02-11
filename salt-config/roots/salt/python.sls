@@ -5,6 +5,13 @@ python2:
       - python-dev
       - python
 
+python3:
+  pkg:
+    - installed
+    - names:
+      - python3-dev
+      - python3
+
 pip2:
   pkg:
     - installed
@@ -35,10 +42,9 @@ isort:
     - installed
     - require:
       - pkg: pip2
-
-python3:
-  pkg:
+coverage:
+  pip:
     - installed
-    - names:
-      - python3-dev
-      - python3
+    - require:
+      - pkg: pip2
+
