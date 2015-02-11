@@ -1,3 +1,6 @@
+en_US.UTF-8:
+    locale.system
+
 frigg:
   user.present:
     - shell: /bin/bash
@@ -5,6 +8,7 @@ frigg:
 /opt/frigg-worker:
   file.directory:
     - makedirs: True
+    - user: frigg
     - require:
       - user: frigg
 
@@ -25,11 +29,13 @@ frigg:
     - requirements: salt://files/requirements.txt
     - user: frigg
     - cwd: /opt/frigg-worker
+    - python: /usr/bin/python3
     - require:
       - user: frigg
       - file: /opt/frigg-worker
-      - pkg: libxml2-dev
-      - pkg: libxslt-dev
+      - pkg: frigg-apt-dependencies 
+      - pkg: python-virtualenv
+      - locale: en_US.UTF-8
 
 /var/log/frigg-worker.log:
   file.managed:
@@ -44,11 +50,14 @@ frigg:
       - pkg: supervisor
       - file: /var/log/frigg-worker.log
 
-libxml2-dev:
-  pkg.installed
-
-libxslt-dev:
-  pkg.installed
+frigg-apt-dependencies:
+  pkg:
+    - installed
+    - names:
+      - libxml2-dev
+      - libxslt-dev
+      - lib32z1-dev
+      - libyaml-dev
 
 supervisor:
   pkg.installed

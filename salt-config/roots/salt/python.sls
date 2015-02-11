@@ -12,11 +12,11 @@ pip2:
     - require:
       - pkg: python2
 
-virtualenv:
-  pip:
-    - installed
+python-virtualenv:
+  pkg.installed:
     - require:
       - pkg: pip2
+      - pkg: python3
 
 flake8:
   pip:
