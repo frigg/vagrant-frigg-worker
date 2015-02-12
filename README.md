@@ -2,7 +2,7 @@
 A vagrant setup to run frigg-worker
 
 ```bash
-vagrant up
+make up
 ```
 
 ## Installed

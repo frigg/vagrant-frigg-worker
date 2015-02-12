@@ -1,5 +1,13 @@
 CONFIG_FILE = salt-config/roots/salt/files/worker.yaml
 
+up: $(CONFIG_FILE)
+	vagrant up --provision
+	touch up
+
+down:
+	rm -f up
+	vagrant destroy
+
 $(CONFIG_FILE):
 	@echo "Redis-host: ";\
 	 read redis_host;\
