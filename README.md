@@ -30,6 +30,12 @@ Image: Ubuntu 14.04
 * isort - installed with pip2
 * coverage - installed with pip2
 
+#### Ruby
+* Ruby 1.9.3
+* Bundler
+* Jekyll
+* Compass
+
 ### Database systems and cache servers
 * memcached
 * mongodb
