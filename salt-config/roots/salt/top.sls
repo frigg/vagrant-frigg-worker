@@ -7,4 +7,5 @@ base:
    - ruby
    - rust
    - databases
+   - phantomjs
    - frigg-worker

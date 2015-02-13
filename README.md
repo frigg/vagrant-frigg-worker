@@ -55,6 +55,7 @@ Image: Ubuntu 14.04
 * libxslt-dev
 * lib32z1-dev
 * libyaml-dev
+* phantomjs
 
 
 --------------
