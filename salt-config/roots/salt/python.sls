@@ -15,9 +15,11 @@ python3:
 pip:
   pkg:
     - latest
-    - name: python-pip
+    - names: python-pip
+    - names: python3-pip
     - require:
       - pkg: python2
+      - pkg: python3
 
 pip2:
   pip:
@@ -35,8 +37,10 @@ pip3:
     - require:
       - pkg: python3
 
-python-virtualenv:
-  pkg.latest:
+virtualenv:
+  pip:
+    - installed
+    - upgrade: True
     - require:
       - pkg: python2 
       - pkg: python3
