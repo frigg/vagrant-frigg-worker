@@ -1,50 +1,71 @@
 python2:
   pkg:
-    - installed
+    - latest
     - names:
       - python-dev
       - python
 
 python3:
   pkg:
-    - installed
+    - latest
     - names:
       - python3-dev
       - python3
 
-pip2:
+pip:
   pkg:
-    - installed
+    - latest
     - name: python-pip
     - require:
       - pkg: python2
 
-python-virtualenv:
-  pkg.installed:
+pip2:
+  pip:
+    - installed
+    - name: pip
+    - upgrade: True
     - require:
-      - pkg: pip2
+      - pkg: pip
+
+pip3:
+  pip:
+    - installed
+    - name: pip
+    - upgrade: True
+    - require:
+      - pkg: python3
+
+python-virtualenv:
+  pkg.latest:
+    - require:
+      - pkg: python2 
       - pkg: python3
 
 flake8:
   pip:
     - installed
+    - upgrade: True
     - require:
-      - pkg: pip2
+      - pip: pip2
 
 tox:
   pip:
     - installed
+    - upgrade: True
     - require:
-      - pkg: pip2
+      - pip: pip2
 
 isort:
   pip:
     - installed
+    - upgrade: True
     - require:
-      - pkg: pip2
+      - pip: pip2
+
 coverage:
   pip:
     - installed
+    - upgrade: True
     - require:
-      - pkg: pip2
+      - pip: pip2
 
