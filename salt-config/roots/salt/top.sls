@@ -1,9 +1,10 @@
 base:
   '*':
    - base
-   - python
-   - node
    - java
+   - node
+   - python
    - ruby
+   - rust
    - databases
    - frigg-worker

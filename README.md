@@ -36,6 +36,9 @@ Image: Ubuntu 14.04
 * Jekyll
 * Compass
 
+#### Rust
+* Rust with cargo
+
 ### Database systems and cache servers
 * memcached
 * mongodb
