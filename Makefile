@@ -1,5 +1,8 @@
 CONFIG_FILE = salt-config/roots/salt/files/worker.yaml
 
+test:
+	@echo "No tests"
+
 up: $(CONFIG_FILE)
 	vagrant up --provision
 	touch up
