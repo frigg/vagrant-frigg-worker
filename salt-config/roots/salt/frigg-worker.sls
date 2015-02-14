@@ -34,7 +34,7 @@ frigg:
       - user: frigg
       - file: /opt/frigg-worker
       - pkg: frigg-apt-dependencies 
-      - pkg: python-virtualenv
+      - pip: virtualenv
       - locale: en_US.UTF-8
 
 /var/log/frigg-worker.log:
