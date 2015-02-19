@@ -9,3 +9,4 @@ base:
    - databases
    - phantomjs
    - frigg-worker
+   - xvfb
