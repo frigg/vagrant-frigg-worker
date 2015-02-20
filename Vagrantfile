@@ -13,4 +13,15 @@ Vagrant.configure(2) do |config|
     salt.minion_config = "salt-config/minion"
     salt.run_highstate = true
   end
+
+  if ENV['NUMBER_OF_WORKERS']
+    number_of_workers = Integer(ENV['NUMBER_OF_WORKERS'])
+  else
+    number_of_workers = 1
+  end
+
+  for i in 1..number_of_workers
+    config.vm.define "worker#{i}" do |worker|
+    end
+  end
 end
