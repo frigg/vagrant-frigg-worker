@@ -1,5 +1,9 @@
 postgresql:
-  pkg.installed
+  pkg.installed: []
+  service.running:
+    - enable: True
+    - watch:
+      - file: pg_hba.conf
 
 postgresql-server-dev-all:
   pkg.installed
