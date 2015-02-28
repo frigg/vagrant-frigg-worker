@@ -23,6 +23,9 @@ pg_hba.conf:
     - require:
       - pkg: postgresql
 
+mysql-server:
+  pkg.installed
+
 redis-server:
   pkg.installed
 
