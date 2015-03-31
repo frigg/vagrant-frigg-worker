@@ -12,23 +12,13 @@ python3:
       - python3-dev
       - python3
 
-pip:
-  pkg:
-    - latest
-    - names: 
-      - python-pip
-      - python3-pip
-    - require:
-      - pkg: python2
-      - pkg: python3
-
 pip2:
   pip:
     - installed
     - name: pip
     - upgrade: True
     - require:
-      - pkg: pip
+      - pkg: python2
 
 pip3:
   pip:
@@ -47,11 +37,13 @@ virtualenv:
     - require:
       - pkg: python2 
       - pkg: python3
+      - pip: pip3
 
 flake8:
   pip:
     - installed
     - upgrade: True
+    - bin_env: /usr/local/bin/pip2
     - require:
       - pip: pip2
 
@@ -61,12 +53,13 @@ tox:
     - upgrade: True
     - bin_env: /usr/local/bin/pip3
     - require:
-      - pip: pip2
+      - pip: pip3
 
 isort:
   pip:
     - installed
     - upgrade: True
+    - bin_env: /usr/local/bin/pip2
     - require:
       - pip: pip2
 
@@ -76,5 +69,4 @@ coverage:
     - upgrade: True
     - bin_env: /usr/local/bin/pip3
     - require:
-      - pip: pip2
-
+      - pip: pip3
