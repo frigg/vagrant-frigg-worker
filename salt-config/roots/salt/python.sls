@@ -4,6 +4,7 @@ python2:
     - names:
       - python-dev
       - python
+      - python-pip
 
 python3:
   pkg:
@@ -11,6 +12,7 @@ python3:
     - names:
       - python3-dev
       - python3
+      - python3-pip
 
 pip2:
   pip:
@@ -20,6 +22,12 @@ pip2:
     - require:
       - pkg: python2
 
+/usr/local/bin/pip3:
+  file.symlink:
+    - target: /usr/bin/pip3
+    - require:
+      - pkg: python3
+
 pip3:
   pip:
     - installed
@@ -28,6 +36,7 @@ pip3:
     - bin_env: /usr/local/bin/pip3
     - require:
       - pkg: python3
+      - file: /usr/local/bin/pip3
 
 virtualenv:
   pip:
