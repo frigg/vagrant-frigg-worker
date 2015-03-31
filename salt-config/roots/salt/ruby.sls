@@ -1,11 +1,21 @@
 ruby:
-  pkg.installed
+  pkg:
+    - installed
+    - names:
+      - ruby
+      - ruby-dev
 
 bundler:
-  gem.installed
+  gem.installed:
+    - require:
+      - pkg: ruby
 
 compass:
-  gem.installed
+  gem.installed:
+    - require:
+      - pkg: ruby
 
 jekyll:
-  gem.installed
+  gem.installed:
+    - require:
+      - pkg: ruby
