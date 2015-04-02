@@ -5,6 +5,9 @@ nvm:
     - user: frigg
     - group: frigg
     - creates: /home/frigg/.nvm
+    - require:
+      - user: frigg
+
 
 frigg-nvm:
   cmd.run:
