@@ -30,3 +30,4 @@ image-libraries:
       - graphicsmagick
       - libgraphicsmagick++1-dev
       - libboost-python-dev
+      - libmagickwand-dev
